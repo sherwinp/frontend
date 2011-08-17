@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="/WEB-INF/templates/common_2.xhtml">
+        <ui:define name="content">
+
+
+                <p style="color:red;">The Legalese</p>  
+   
+                <p>If the file you are about to send is BAD, replacement is not an option for 8955-SSA.</p>
+                <p>You must submit a complete original file. If your file is GOOD, it will be immediately released.</p>
+                <p>Under penalties of perjury, I declare that the file I am about to transmit is correct and complete,</p>
+                <p>to the best of my knowledge and belief.</p> 
+
+                <p>Although an authorized agent may enter their PIN, the payer is responsible for the accuracy of the returns.</p>
+                <p>The payer will be liable for penalties for failure to comply with filing requirements.</p> 
+                <h:form id="enterpin">
+                <p><h:outputLabel value="Enter Your PIN:"/> <h:inputText id="txtPIN" />
+                    <h:commandButton id="btnSubmit" action="uploadfile.xhtml?faces-redirect=true" value="Submit"/></p>
+                </h:form>
+
+            Enter Your PIN:    
+
+
+            Pin must be 10 numerics
+
+
+            NOTE: If you forget your PIN, please call us toll-free at 1-866-455-7438. 
+ 
+
+                    
+        </ui:define>
+    </ui:composition>
+</html>

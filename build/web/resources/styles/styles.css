@@ -1,0 +1,40 @@
+body{
+    margin: 0em;
+    padding: 0em;
+    height: 100%;
+    min-width: 720px;
+    background-color: #f0f0f0;
+    font-family: arial, verdana, sans-serif;
+    font-size: .8em;
+}
+image {
+    border:0;
+}
+#border1 {
+    	width: 80%;
+        height: 80%;
+        border: 1px solid #a9a9a9;
+        margin-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+}
+div#main
+{
+
+}
+div.headerBar
+{
+    background-color: #001E59;
+}
+div.content{
+    float: right;
+    width: 60%;
+    min-height: 48em;
+    
+}
+#footerDiv{
+    position:relative;
+    clear:both;
+    padding-left: 5px;
+    line-height: 2em;
+}

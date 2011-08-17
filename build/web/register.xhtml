@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="/WEB-INF/templates/common_1.xhtml">
+        <ui:define name="content">
+                    <h2>Create FIRE System Account</h2>
+
+                    <p>Please complete the form below. All fields are required unless noted otherwise. 
+                       If you already have an account, you can go ahead and <a href="logon.xhtml">Log on</a></p>
+
+                    <p>You must have a Transmitter Control Code (TCC) before you can transmit an information return file.
+                       If you have any questions, please call us at 1-866-455-7438.</p>
+
+                    <p>*Do you already have an account but can't remember your password?
+                        Give us a call toll-free at 1-866-455-7438 to assign a new password.</p>
+                    <h:form id="Address">
+                        <p><h:outputLabel value="Company:"/> <h:inputText id="txtCompany" /></p>
+                        <p><h:outputLabel value="Address:"/> <h:inputText id="txtAddress" /></p>
+                        <p><h:outputLabel value="City:"/> <h:inputText id="txtCity" /></p>
+                        <p><h:outputLabel value="State:"/> <h:inputText id="txtState" /></p>
+                        <p><h:outputLabel value="Zip:"/> <h:inputText id="txtZip" /></p>
+                        <p><h:outputLabel value="Phone:"/> <h:inputText id="txtPhone" /></p>
+                        <p><h:outputLabel value="Extension:"/> <h:inputText id="txtExten" /><span> (Optional)</span></p>
+                        <p><h:outputLabel value="E-mail:"/> <h:inputText id="txtEmail" /></p>
+                        <p><h:commandButton id="btnSubmit" value="Submit"/></p>
+                    </h:form>
+        </ui:define>
+        </ui:composition>
+</html>

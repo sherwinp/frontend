@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="/WEB-INF/templates/common_2.xhtml">
+        <ui:define name="content">
+            
+            <h2><h:outputLabel value="File Upload Statistics"/></h2>
+            <h:outputLabel value="Total Bytes Received:" />
+            <p>Please ensure this is the correct size.</p>
+            <p>We renamed your file to: </p><h:outputLabel value="ORIG.33333.11111"/>
+            <p>*You may want to print this screen for your records.</p>
+            <h:commandLink action="uploadfile?faces-redirect=true" />
+            <p>
+                **Reminder - Please record this filename on your 
+                "Form 8809, Request for Extension of
+                Time to File Information Returns" and fax the completed form to FIRE Help Desk
+                at 1-877-477-0572.
+            </p>
+            <p>
+                ** Don't forget to check the File Status option after
+               five business days to verify file acceptability. The results for extension files
+               are normally available within 5 business days after the completed Form 8809 has
+               been received. 
+            </p>
+            <p>Please log onto the FIRE system and go to 'CHECK FILE STATUS' to verify the status of your file.</p>
+            <p>A FILE STATUS will be available within a few days regarding the status of your file</p>
+                                                 
+            <p>**Remember, the F4804 is no longer required for electronically submitted files</p>
+        </ui:define>
+    </ui:composition>
+</html>

@@ -1,0 +1,15 @@
+div.navigation
+{
+    
+    background-repeat: repeat-x;
+    float: left;
+    border: #a9a9a9 1px solid;
+    width: 18em;
+    min-height: 48em;
+}
+div.navigation ul li
+{
+    list-style-type: square;
+    
+    height: 1.6em;
+}

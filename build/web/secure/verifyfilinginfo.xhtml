@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="/WEB-INF/templates/common_2.xhtml">
+        <ui:define name="content">
+                    <p>Verify Your Filing Information</p>
+                    <h:form id="Address">                        
+                        <p><h:outputLabel value="Company:"/> <h:inputText id="txtCompany" /></p>
+                        <p><h:outputLabel value="Address:"/> <h:inputText id="txtAddress" /></p>
+                        <p><h:outputLabel value="City:"/> <h:inputText id="txtCity" /></p>
+                        <p><h:outputLabel value="State:"/> <h:inputText id="txtState" /></p>
+                        <p><h:outputLabel value="Zip:"/> <h:inputText id="txtZip" /></p>
+                        <p><h:outputLabel value="Phone:"/> <h:inputText id="txtPhone" /></p>
+                        <p><h:outputLabel value="Extension:"/> <h:inputText id="txtExten" /><span> (Optional)</span></p>
+                        <p><h:outputLabel value="E-mail:"/> <h:inputText id="txtEmail" /></p>
+                        <p><h:commandButton id="btnAccept" action="definitionoftype.xhtml?faces-redirect=true" value="Accept"/></p>
+                    </h:form>
+                    <p style="color:red;">If you are using email filtering software, configure your software to accept email from fire@irs.gov or irs.e-helpmail@irs.gov. </p>
+                    <p style="color:red;">We are using these email addresses to contact you about bad files and file status (excluding extensions), publication availability, updates, etc.</p> 
+                    
+
+        </ui:define>
+    </ui:composition>
+</html>

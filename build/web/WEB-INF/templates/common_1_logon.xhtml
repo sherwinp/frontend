@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <f:view contentType="text/html">
+        <h:head>
+            <link rel="shortcut icon"    
+                  href="/airx/favicon.gif"
+                  />
+
+            <title>Internal Revenue Service</title>
+            <meta http-equiv="Content-Language" content="en-US" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <h:outputStylesheet library="styles" name="styles.css" />
+            <h:outputStylesheet library="styles" name="navigation.css" />
+        </h:head>
+        <h:body>
+            <div id="border1" >
+                <div class="headerBar">
+                    <h:link>
+                        <h:graphicImage library="images" name="irslogo.gif" id="logo" 
+                                        title="Internal Revenue Service United States Department of the Treasury"
+                                        alt="Internal Revenue Service United States Department of the Treasury" /></h:link>
+                </div>
+
+                <h:form id="login" onsubmit="javascript:document.login.action='j_security_check';" prependId="false">
+                    <div id="main">
+                        <div class="navigation">
+                            <label>Menu Options</label>
+                            <ul>
+                                <li><h:link outcome="secure/index" value="Log On" /></li>
+                                <li><h:link outcome="register" value="Create New Account" /></li>
+                                <li><h:link outcome="basics" value="Learn The Basics" /></li>
+                            </ul>
+                        </div>
+                        <div class="content">    
+                            <ui:insert name="content">
+                            </ui:insert>
+                        </div>
+                    </div>
+                </h:form>
+
+                <div id="footerDiv">
+                    <hr />
+                    <a href="http://www.irs.gov/efile/article/0,,id=164702,00.html">FIRE Privacy Policy</a>
+                </div>
+            </div>
+
+        </h:body>
+    </f:view> 
+</html>

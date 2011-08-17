@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="/WEB-INF/templates/common_1_logon.xhtml">
+        <ui:define name="content">  
+            <h:panelGrid>
+            <label>Log In</label>
+
+            <p>
+                <h:outputLabel for="j_username">User Name:</h:outputLabel>
+                <h:inputText id="j_username" required="true" requiredMessage="Username Required"/>
+            </p>
+            <p>
+                <h:outputLabel for="j_password">Password:</h:outputLabel>
+                <h:inputSecret id="j_password" required="true" requiredMessage="Password Required"/>
+            </p>
+            <h:panelGroup>
+            <p><h:commandButton id="j_security_check"
+                                type="submit" 
+                                action="#{authenticationController.login}"
+                                value="Log In"/></p>
+
+            <p><h:messages errorStyle="color:red;" /></p>
+            </h:panelGroup>
+            <p>
+                <a href="forgotcredentials.html" >Forgot my password</a>
+            </p>
+
+            <p>You will need a User ID and password to begin using this application.</p>
+            <p>If you do not already have an account, click <a href="register.xhtml">Create New Account</a> to start setting up your new account.</p>
+            <p>Otherwise, you can enter your assigned User ID and the password you have chosen to begin using this application.</p>
+            </h:panelGrid>
+        </ui:define>
+    </ui:composition>
+</html>

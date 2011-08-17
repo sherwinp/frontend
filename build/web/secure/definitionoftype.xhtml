@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="/WEB-INF/templates/common_3.xhtml">
+        <ui:define name="navigation">
+                    <ul>
+                        <li><h:link outcome="enterpin.xhtml" value="Test File"/></li>
+                        <li><h:link outcome="enterpin.xhtml" value="Original File"/></li>
+                        <li><h:link outcome="enterpin.xhtml" value="Replacement File"/></li>
+                        <li><h:link outcome="enterpin.xhtml" value="Correction File"/></li>
+                        <li><h:link outcome="enterpin.xhtml" value="Amended File"/></li>
+                        <li><h:link outcome="mainmenu.xhtml" value="Main Menu"/></li>                       
+                        <li><h:commandLink action="#{authenticationController.logout}" value="Log Out" /></li> 
+                    </ul>                
+                </ui:define>
+                <ui:define name="content">
+                    <label style="font-weight: 600;">Definitions of File Types</label>
+                    <div style="clear:both;">
+                    <div style="float:left;height:10em;">
+                        <label>- Original File -</label> 
+                    </div>
+                    <div style="float:right;height:10em;">
+                        <label> - Replacement File -</label>
+                        <p>If an original or correction information return is bad (FILE STATUS = BAD), it must be sent as a replacement file after you fix the errors. In the case of an 8955-SSA File, a new original file must be submitted.</p>
+                    </div>
+                    </div>
+                    <div style="clear:both;">
+                    <div style="float:left;height:10em;">
+                        <label>- Amended/Correction File -</label>
+                    </div>
+                    <div style="float:right;height:10em;">
+                        <label>- Test File -</label>
+                        <p>This option is used to test your files for the upcoming tax year. Test dates are as follows:</p>
+
+                        <p><b>Note:</b> Test submissions are not accepted at this site. If you are trying to submit test submissions, go to fire.test.irs.gov </p>
+
+1042-S - 11/1 thru 2/15
+8027 - 11/1 thru 2/15
+All Others - 11/1 thru 2/15 
+                    </div>
+                    </div>
+        </ui:define>
+    </ui:composition>
+</html>

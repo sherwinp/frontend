@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <f:view>
+        <h:head>
+            <link rel="shortcut icon" 
+                  href="#{request.contextPath}/favicon.gif"
+                  />
+
+            <title>Internal Revenue Service</title>
+            <meta http-equiv="Content-Language" content="en-US" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <h:outputStylesheet library="styles" name="styles.css" />
+            <h:outputStylesheet library="styles" name="navigation.css" />
+        </h:head>
+        <h:body>
+            <div id="border1" >
+                <div class="headerBar">
+                    <h:link>
+                        <h:graphicImage library="images" name="irslogo.gif" id="logo" 
+                                        title="Internal Revenue Service United States Department of the Treasury"
+                                        alt="Internal Revenue Service United States Department of the Treasury" /></h:link>
+                </div>
+                <h:form>
+                <div id="main">
+                    <div class="navigation">
+                        
+                        <label>Menu Options</label>
+                        <ui:insert name="navigation">
+                        <ul>
+                            <li><h:link outcome="entertccandein?type=into" value="Send Infomation Returns" /></li>
+                            <li><h:link outcome="extensionoftimeoptions" value="Extension of Time Request" /></li>
+                            <li><h:link outcome="checkfilesstatus" value="Check Files Status" /></li>
+                            <li><h:link outcome="email" value="E-Mail" /></li>
+                            <li><h:link outcome="changepassword" value="Change Password" /></li>
+                            <li><h:link outcome="updateyouraccount" value="Update Account" /></li>
+                            <li><h:link outcome="changeyourpin" value="Change PIN" /></li>
+                            <li><h:commandLink action="#{authenticationController.logout}" value="Log Out" /></li>
+                        </ul>
+                        </ui:insert>
+                    </div>
+                    <div class="content">    
+                        <ui:insert name="content">
+                        </ui:insert>
+                    </div>
+                </div>
+                </h:form>
+                <div id="footerDiv">
+                    <hr />
+                    <a href="http://www.irs.gov/efile/article/0,,id=164702,00.html">FIRE Privacy Policy</a>
+                </div>
+            </div>
+
+        </h:body>
+    </f:view>
+</html>

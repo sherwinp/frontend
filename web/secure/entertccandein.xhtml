@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="/WEB-INF/templates/common_2.xhtml">
+        <ui:define name="content">
+                    <p>
+                    <h:form id="tccandein">
+                    <p><h:outputLabel for="tcc" value="TCC:"/><h:inputText id="tcc" /></p>
+                    <p><h:outputLabel for="tin" value="TIN:"/><h:inputText id="tin" /><span> (9 numerics - no hyphens)</span></p>
+                    <p><h:commandButton action="verifyfilinginfo?faces-redirect=true" value="Submit" /></p>
+                    </h:form>
+                    </p>
+                    <p>Do not send W-2's on this system.  They must be filed via <a href="http://www.ssa.gov/employer">"www.ssa.gov/employer"</a>.</p>
+                    <p><b>NOTE</b>: If you do not have a TCC or the TCC/TIN combination you entered
+                        does not appear to be valid, please call toll-free at 1-866-455-7438 for assistance.
+                    </p>
+
+        </ui:define>
+    </ui:composition>
+</html>

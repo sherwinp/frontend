@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <ui:composition template="/WEB-INF/templates/common_2_uploadfile.xhtml">
+        <ui:define name="content">
+
+            <label>Upload Your File</label>  
+
+            <h:outputLabel value="Type:"/>  <h:outputLabel value="CORR"  />
+
+            <p><h:outputLabel value="User ID: " /><h:outputLabel value="UserXXX" /></p>
+            <p><h:outputLabel value="TCC: " /><h:outputLabel  value="63333"/>  </p>
+            <p><h:outputLabel value="TIN: " /> <h:outputLabel value="333333333"/></p>
+
+
+            <p>Click on the BROWSE button located below to open a file selection window and choose your file, then click on UPLOAD to transmit your file.</p>
+            <form id="uploadform" name="uploadform" method="post" action="upload" enctype="multipart/form-data">   
+                <p><h:outputLabel value="File Name: " />
+                    <input type="file" id="theFile" name="theFile" />   
+
+                </p>  
+
+                <p><input type="submit" onclick="javascript:beginUpload(this.form);return false;" id="btnSend" name="btnSend" value="Send" /></p>
+                <div class="progressbar">
+                    <div id="test" name="test" class="progressbar-completed" style="width:50%;">
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </form>   
+        </ui:define>
+    </ui:composition>
+</html>
